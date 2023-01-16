@@ -14,7 +14,7 @@ class BitcoinController extends Controller
      */
     public function index()
     {
-        //
+        return view('bitcoin.index');
     }
 
     /**
