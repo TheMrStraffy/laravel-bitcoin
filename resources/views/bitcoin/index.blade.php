@@ -19,7 +19,9 @@
                         <td>{{ $bitcoin->date }}</td>
                         <td>{{ $bitcoin->open }}</td>
                         <td>{{ $bitcoin->high }}</td>
-                        <td>xxx</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{route('bitcoins.show', $bitcoin)}}">Details</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
