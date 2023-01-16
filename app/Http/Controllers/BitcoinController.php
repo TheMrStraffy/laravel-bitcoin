@@ -25,7 +25,7 @@ class BitcoinController extends Controller
      */
     public function create()
     {
-        //
+        return view('bitcoin.create');
     }
 
     /**
@@ -36,7 +36,12 @@ class BitcoinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $new_bitcoin = new Bitcoin();
+        $new_bitcoin->fill($form_data);
+        $new_bitcoin->save();
+        return redirect()->route('bitcoins.show', $new_bitcoin);
     }
 
     /**
@@ -58,7 +63,7 @@ class BitcoinController extends Controller
      */
     public function edit(Bitcoin $bitcoin)
     {
-        //
+        return view('bitcoin.edit', compact('bitcoin'));
     }
 
     /**
@@ -70,7 +75,10 @@ class BitcoinController extends Controller
      */
     public function update(Request $request, Bitcoin $bitcoin)
     {
-        //
+        $form_data = $request->all();
+
+        $bitcoin->update($form_data);
+        return redirect()->route('bitcoins.show', $bitcoin);
     }
 
     /**

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Bitcoin extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        "date",
+        "price",
+        "open",
+        "high",
+        "change",
+        "volume"
+    ];
 }
