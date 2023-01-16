@@ -19,7 +19,7 @@ return new class extends Migration
             $table->float('price',8,1);
             $table->float('open',8,1);
             $table->float('high',8,1);
-            $table->float('change',3,1);
+            $table->float('change',4,1);
             $table->string('volume');
             $table->timestamps();
         });
