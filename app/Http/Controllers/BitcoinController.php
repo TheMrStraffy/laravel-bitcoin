@@ -47,7 +47,7 @@ class BitcoinController extends Controller
      */
     public function show(Bitcoin $bitcoin)
     {
-        //
+        return view('bitcoin.show', compact('bitcoin'));
     }
 
     /**
