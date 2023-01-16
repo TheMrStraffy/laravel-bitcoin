@@ -14,7 +14,8 @@ class BitcoinController extends Controller
      */
     public function index()
     {
-        return view('bitcoin.index');
+        $bitcoins = Bitcoin::paginate(20);
+        return view('bitcoin.index', compact('bitcoins'));
     }
 
     /**
