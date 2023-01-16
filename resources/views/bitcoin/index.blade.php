@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+
         <table class="table">
             <thead>
                 <tr>
@@ -21,6 +22,7 @@
                         <td>{{ $bitcoin->high }}</td>
                         <td>
                             <a class="btn btn-primary" href="{{route('bitcoins.show', $bitcoin)}}">Details</a>
+                            <a class="btn btn-primary" href="{{route('bitcoins.edit', $bitcoin)}}">Edit</a>
                         </td>
                     </tr>
                 @endforeach
